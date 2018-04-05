@@ -22,7 +22,7 @@ function install_yaourt_package
 
 function install_base_system_packages
 {
-    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip jre-openjdk jre-openjdk-headless
+    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip jre8-openjdk jre8-openjdk-headless
 }
 
 function remove_unused_packages
