@@ -1,4 +1,5 @@
 function run_system_tweaks
 {
-    echo Running Linux system tweaks
+    # fix 'Sparse file not found' on boot
+    sudo grub-editenv create
 }

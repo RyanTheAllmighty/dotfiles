@@ -6,18 +6,18 @@ function upgrade_packages
 # installs a pacman package (if not already installed) and will answer yes to all questions
 function install_pacman_package
 {
-    sudo pacman -S --needed --no-confirm $@
+    sudo pacman -S --needed --noconfirm $@
 }
 
 # remove a pacman package
 function remove_pacman_package
 {
-    sudo pacman -Rs --needed --no-confirm $@
+    sudo pacman -Rs --needed --noconfirm $@
 }
 
 function install_yaourt_package
 {
-    yaourt -S --needed --no-confirm $@
+    yaourt -S --needed --noconfirm $@
 }
 
 function install_base_system_packages
