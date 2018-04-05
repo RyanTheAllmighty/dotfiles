@@ -1,4 +1,3 @@
-. "$HOME/.dotfiles/includes/osx/functions.sh"
 . "$HOME/.dotfiles/includes/osx/system.sh"
 . "$HOME/.dotfiles/includes/osx/homebrew.sh"
 
