@@ -26,8 +26,8 @@ function install_dotfiles
     # install desktop applications
     install_desktop_applications
 
-    # install NodeJS tooling
-    install_nodejs_tooling
+    # install development tools (node, docker, aws, etc)
+    install_development_tools
 
     # system tweaks
     run_system_tweaks

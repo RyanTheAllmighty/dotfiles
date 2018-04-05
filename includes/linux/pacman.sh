@@ -22,9 +22,7 @@ function install_yaourt_package
 
 function install_base_system_packages
 {
-    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip docker jre-openjdk jre-openjdk-headless
-
-    sudo systemctl enable --now docker
+    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip jre-openjdk jre-openjdk-headless
 }
 
 function remove_unused_packages
@@ -34,6 +32,17 @@ function remove_unused_packages
 function cleanup_unused_files
 {
     rm -f ~/Readme
+    rm -rf ~/Public
+    rm -rf ~/.cache/evolution
+    rm -rf ~/.cache/lollypop
+    rm -rf ~/.cache/mozilla
+    rm -rf ~/.cache/ms-office-online
+    rm -rf ~/.config/evolution
+    rm -rf ~/.config/hexchat
+    rm -f ~/.config/manjaro-hello.json
+    rm -rf ~/.hplip
+    rm -rf ~/.jak
+    rm -rf ~/.mozilla
 }
 
 function install_yaourt
@@ -55,6 +64,14 @@ function install_desktop_applications
     install_yaourt_package spotify google-chrome visual-studio-code-bin discord gnome-usage postman-bin gitkraken hyper vlc-git plex-media-player
 }
 
+function install_docker
+{
+    install_pacman_package docker
+
+    # enable on boot and start the docker daemon
+    sudo systemctl enable --now docker
+}
+
 function install_nodejs_tooling
 {
     install_yaourt_package nvm
@@ -63,4 +80,14 @@ function install_nodejs_tooling
     source /usr/share/nvm/init-nvm.sh
 
     nvm install lts/carbon
+}
+
+# install development tools needed
+function install_development_tools
+{
+    install_docker
+
+    install_nodejs_tooling
+
+    install_pacman_package aws-cli
 }
