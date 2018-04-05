@@ -1,6 +1,6 @@
-. ./functions.sh
-. ./system.sh
-. ./homebrew.sh
+. "$HOME/.dotfiles/includes/osx/functions.sh"
+. "$HOME/.dotfiles/includes/osx/system.sh"
+. "$HOME/.dotfiles/includes/osx/homebrew.sh"
 
 function install_dotfiles
 {

@@ -1,10 +1,9 @@
 case "$OSTYPE" in
   darwin*)
-    . ./includes/osx/main.sh
+    . "$HOME/.dotfiles/includes/osx/main.sh"
     ;;
   linux*)
-    . ./includes/linux/main.sh
-    exit 1
+    . "$HOME/.dotfiles/includes/linux/main.sh"
     ;;
   msys*)
     echo "Unsupported OS type. Exiting" 1>&2
