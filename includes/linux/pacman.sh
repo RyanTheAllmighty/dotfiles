@@ -12,7 +12,7 @@ function install_pacman_package
 # remove a pacman package
 function remove_pacman_package
 {
-    sudo pacman -Rs --needed --noconfirm $@
+    sudo pacman -Rsdd --noconfirm $@
 }
 
 function install_aur_package
