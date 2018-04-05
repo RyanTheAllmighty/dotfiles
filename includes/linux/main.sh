@@ -18,8 +18,8 @@ function install_dotfiles
     # this removes base applications installed that aren't used
     remove_unused_packages
 
-    # install Yaourt
-    install_yaourt
+    # install Trizen (manages AUR builds)
+    install_trizen
 
     # install zsh and related plugins
     install_zsh

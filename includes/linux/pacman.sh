@@ -15,9 +15,9 @@ function remove_pacman_package
     sudo pacman -Rs --needed --noconfirm $@
 }
 
-function install_yaourt_package
+function install_aur_package
 {
-    yaourt -S --needed --noconfirm $@
+    trizen -Sa --needed --noconfirm $@
 }
 
 function install_base_system_packages
@@ -46,23 +46,41 @@ function cleanup_unused_files
     rm -rf ~/.mozilla
 }
 
-function install_yaourt
+function install_trizen
 {
-    install_pacman_package base-devel yaourt
+    mkdir -p /tmp/trizen
+    cd /tmp/trizen
+
+    git clone https://aur.archlinux.org/trizen.git
+    cd trizen
+    makepkg -si
+
+    cd /
+    rm -rf /tmp/trizen
 }
 
 function install_zsh
 {
     install_pacman_package zsh
 
-    install_yaourt_package oh-my-zsh-git antigen-git
+    install_aur_package oh-my-zsh-git
+    install_aur_package antigen-git
 
     add_shell "/usr/bin/zsh"
 }
 
 function install_desktop_applications
 {
-    install_yaourt_package spotify google-chrome visual-studio-code-bin discord gnome-usage postman-bin gitkraken hyper vlc-git plex-media-player
+    install_aur_package hyper-appimage
+    install_aur_package spotify
+    install_aur_package google-chrome
+    install_aur_package visual-studio-code-bin
+    install_aur_package discord
+    install_aur_package gnome-usage
+    install_aur_package postman-bin
+    install_aur_package gitkraken
+    install_aur_package vlc-git
+    install_aur_package plex-media-player
 }
 
 function install_docker
@@ -75,7 +93,7 @@ function install_docker
 
 function install_nodejs_tooling
 {
-    install_yaourt_package nvm
+    install_aur_package nvm
 
     # source in the init so we can use it to get the latest NVM installed
     source /usr/share/nvm/init-nvm.sh
