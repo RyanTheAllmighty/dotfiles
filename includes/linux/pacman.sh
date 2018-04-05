@@ -69,13 +69,21 @@ function install_zsh
     add_shell "/usr/bin/zsh"
 }
 
+# Discord has some issues at the moment which needs a small workaround
+function install_discord
+{
+    gpg --recv-keys B6C8F98282B944E3B0D5C2530FC3042E345AD05D
+    install_aur_package libc++
+    install_aur_package discord
+}
+
 function install_desktop_applications
 {
-    install_aur_package hyper-appimage
+    install_aur_package hyper-bin
     install_aur_package spotify
     install_aur_package google-chrome
     install_aur_package visual-studio-code-bin
-    install_aur_package discord
+    install_discord
     install_aur_package gnome-usage
     install_aur_package postman-bin
     install_aur_package gitkraken
