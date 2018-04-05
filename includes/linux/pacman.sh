@@ -28,6 +28,7 @@ function install_base_system_packages
 function remove_unused_packages
 {
     remove_pacman_package gnome-weather totem uget transmission-gtk gnome-todo lollypop libreoffice-fresh hexchat yelp gnome-maps firefox evolution empathy evince gnome-contacts cheese brasero hplip ms-office-online manjaro-hello
+}
 
 function cleanup_unused_files
 {
