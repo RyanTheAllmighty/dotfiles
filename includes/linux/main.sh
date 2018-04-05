@@ -1,5 +1,6 @@
 . "$HOME/.dotfiles/includes/nix/functions.sh"
 . "$HOME/.dotfiles/includes/linux/pacman.sh"
+. "$HOME/.dotfiles/includes/linux/system.sh"
 
 function install_dotfiles
 {
