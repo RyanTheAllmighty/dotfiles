@@ -3,7 +3,7 @@ case "$OSTYPE" in
     . ./includes/osx/main.sh
     ;;
   linux*)
-    echo "Unsupported OS type. Exiting" 1>&2
+    . ./includes/linux/main.sh
     exit 1
     ;;
   msys*)
