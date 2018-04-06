@@ -28,6 +28,9 @@ function setup_system
     # install development tools (node, docker, aws, etc)
     install_development_tools
 
+    # install appearance tweaks
+    install_appearance_tweaks
+
     touch "$HOME/.dotfiles/.system-setup"
 }
 

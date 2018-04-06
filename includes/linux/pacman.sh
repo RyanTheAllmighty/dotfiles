@@ -104,3 +104,8 @@ function install_development_tools
 
     install_pacman_package aws-cli
 }
+
+function install_appearance_tweaks
+{
+    install_pacman_package arc-gtk-theme arc-kde papirus-icon-theme
+}
