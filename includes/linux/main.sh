@@ -38,7 +38,7 @@ function setup_system
     install_development_tools
 
     # install system tweaks
-    install_system_tweaks
+    # install_system_tweaks
 
     touch "$HOME/.dotfiles/.system-setup"
 }
