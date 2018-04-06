@@ -79,6 +79,7 @@ I've tested this using my own personal rigs which are made up of:
 
 * Windows 10 Professional
 * Manjaro Linux Gnome Edition
+* Manjaro Linux KDE Edition
 
 ## Inspiration
 

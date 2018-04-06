@@ -12,35 +12,29 @@ function install_pacman_package
 # remove a pacman package
 function remove_pacman_package
 {
-    sudo pacman -Rsdd --noconfirm $@
+    sudo pacman -Rsn --noconfirm $@
 }
 
 function install_aur_package
 {
-    trizen -Sa --needed --noconfirm $@
+    yaourt -S --needed --noconfirm $@
 }
 
 function install_base_system_packages
 {
-    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip jre8-openjdk jre8-openjdk-headless base-devel
+    install_pacman_package git git-lfs python vim tree speedtest-cli p7zip jre8-openjdk jre8-openjdk-headless base-devel vlc yaourt
 }
 
 function remove_unused_packages
 {
-    remove_pacman_package gnome-weather totem uget transmission-gtk gnome-todo lollypop libreoffice-fresh hexchat yelp gnome-maps firefox evolution empathy evince gnome-contacts brasero hplip ms-office-online manjaro-hello
-}
+    # manjaro gnome specific
+    remove_pacman_package gnome-weather totem uget transmission-gtk gnome-todo lollypop hexchat yelp gnome-maps evolution empathy evince gnome-contacts brasero
 
-function install_trizen
-{
-    mkdir -p /tmp/trizen
-    cd /tmp/trizen
+    # manjaro kde specific
+    remove_pacman_package inkscape kget konversation qbittorrent thunderbird cantana yakuake imagewriter
 
-    git clone https://aur.archlinux.org/trizen.git
-    cd trizen
-    makepkg -si --noconfirm
-
-    cd /
-    rm -rf /tmp/trizen
+    # crapware
+    remove_pacman_package ms-office-online manjaro-hello libreoffice-fresh firefox manjaro-hello hplip
 }
 
 function install_zsh
