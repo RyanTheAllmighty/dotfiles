@@ -28,13 +28,37 @@ function install_base_system_packages
 function remove_unused_packages
 {
     # manjaro gnome specific
-    remove_pacman_package gnome-weather totem uget transmission-gtk gnome-todo lollypop hexchat yelp gnome-maps evolution empathy evince gnome-contacts brasero
+    remove_pacman_package gnome-weather
+    remove_pacman_package totem
+    remove_pacman_package uget
+    remove_pacman_package transmission-gtk
+    remove_pacman_package gnome-todo
+    remove_pacman_package lollypop
+    remove_pacman_package hexchat
+    remove_pacman_package yelp
+    remove_pacman_package gnome-maps
+    remove_pacman_package evolution
+    remove_pacman_package empathy
+    remove_pacman_package evince
+    remove_pacman_package gnome-contacts
+    remove_pacman_package brasero
 
     # manjaro kde specific
-    remove_pacman_package inkscape kget konversation qbittorrent thunderbird cantana yakuake imagewriter
+    remove_pacman_package inkscape
+    remove_pacman_package kget
+    remove_pacman_package konversation
+    remove_pacman_package qbittorrent
+    remove_pacman_package thunderbird
+    remove_pacman_package cantana
+    remove_pacman_package yakuake
 
     # crapware
-    remove_pacman_package ms-office-online manjaro-hello libreoffice-fresh firefox manjaro-hello hplip
+    remove_pacman_package ms-office-online
+    remove_pacman_package manjaro-hello
+    remove_pacman_package libreoffice-fresh
+    remove_pacman_package firefox
+    remove_pacman_package hplip
+    remove_pacman_package imagewriter
 }
 
 function install_zsh
