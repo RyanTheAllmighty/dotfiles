@@ -14,4 +14,4 @@ case "$OSTYPE" in
     ;;
 esac
 
-install_dotfiles
+setup_system

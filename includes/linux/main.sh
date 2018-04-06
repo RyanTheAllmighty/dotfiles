@@ -2,7 +2,7 @@
 . "$HOME/.dotfiles/includes/linux/pacman.sh"
 . "$HOME/.dotfiles/includes/linux/system.sh"
 
-function install_dotfiles
+function setup_system
 {
     echo Installing Linux dotfiles
 
@@ -35,4 +35,9 @@ function install_dotfiles
 
     # install development tools (node, docker, aws, etc)
     install_development_tools
+}
+
+function install_dotfiles
+{
+
 }
