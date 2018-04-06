@@ -10,6 +10,9 @@ function setup_system
     # ask for sudo access now to prevent it later
     get_sudo_access
 
+    # ask user to enter their git user information
+    configure_git_user
+
     # fix grub bootloader
     fix_grub_bootloader
 

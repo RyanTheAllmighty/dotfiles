@@ -8,6 +8,9 @@ function setup_system
 
     get_sudo_access
 
+    # ask user to enter their git user information
+    configure_git_user
+
     run_system_tweaks
 
     install_homebrew
