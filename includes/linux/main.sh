@@ -7,15 +7,6 @@ function setup_system
 {
     echo Setting up system
 
-    # ask for sudo access now to prevent it later
-    get_sudo_access
-
-    # ask user to enter their git user information
-    configure_git_user
-
-    # fix grub bootloader
-    fix_grub_bootloader
-
     # this removes base applications installed that aren't used
     remove_unused_packages
 
@@ -37,9 +28,6 @@ function setup_system
     # install development tools (node, docker, aws, etc)
     install_development_tools
 
-    # install system tweaks
-    # install_system_tweaks
-
     touch "$HOME/.dotfiles/.system-setup"
 }
 
@@ -59,9 +47,4 @@ function install_dotfiles
     link_file linux/.aliases "$HOME/.aliases"
     link_file linux/.hyper.js "$HOME/.hyper.js"
     link_file linux/.zshrc "$HOME/.zshrc"
-}
-
-function install_system_tweaks
-{
-    restore_dconf_settings
 }

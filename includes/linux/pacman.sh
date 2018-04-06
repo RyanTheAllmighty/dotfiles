@@ -65,7 +65,7 @@ function install_zsh
 {
     install_pacman_package zsh autojump thefuck
 
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    install_aur_package oh-my-zsh-git
     install_aur_package antigen-git
 }
 

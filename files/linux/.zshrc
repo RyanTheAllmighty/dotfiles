@@ -1,5 +1,5 @@
 # path to oh-my-zsh installation
-export ZSH=/home/ryan/.oh-my-zsh
+export ZSH=/usr/share/oh-my-zsh
 
 # add in antigen
 source /usr/share/zsh/share/antigen.zsh
