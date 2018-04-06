@@ -18,8 +18,12 @@ git clone --branch master https://github.com/RyanTheAllmighty/dotfiles.git "$HOM
 
 cd "$HOME/.dotfiles"
 
-# change to the SSH origin for key pushing
-git remote set-url origin git@github.com:RyanTheAllmighty/dotfiles.git
+if [[ `git remote get-url origin` = "https://github.com/RyanTheAllmighty/dotfiles.git" ]]; then
+    printf "\n\nUsing https git url. Please consider using the ssh one\n\n"
+    printf "git remote set-url origin git@github.com:RyanTheAllmighty/dotfiles.git\n\n"
+    printf "Press enter to continue\n"
+    read
+fi
 
 # run the installer
 . "$HOME/.dotfiles/install.sh"
