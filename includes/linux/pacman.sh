@@ -45,12 +45,10 @@ function install_trizen
 
 function install_zsh
 {
-    install_pacman_package zsh
+    install_pacman_package zsh autojump thefuck
 
-    install_aur_package oh-my-zsh-git
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     install_aur_package antigen-git
-
-    add_shell "/usr/bin/zsh"
 }
 
 # Discord has some issues at the moment which needs a small workaround
@@ -83,22 +81,10 @@ function install_docker
     sudo systemctl enable --now docker
 }
 
-function install_nodejs_tooling
-{
-    install_aur_package nvm
-
-    # source in the init so we can use it to get the latest NVM installed
-    source /usr/share/nvm/init-nvm.sh
-
-    nvm install lts/carbon
-}
-
 # install development tools needed
 function install_development_tools
 {
     install_docker
-
-    install_nodejs_tooling
 
     install_pacman_package aws-cli
 }
