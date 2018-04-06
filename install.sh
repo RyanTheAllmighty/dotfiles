@@ -15,7 +15,14 @@ case "$OSTYPE" in
 esac
 
 if [ ! -f "$HOME/.dotfiles/.system-setup" ]; then
-    setup_system
+    echo -n "Setup System (y/n)? "
+    read answer
+    if echo "$answer" | grep -iq "^y" ;then
+        setup_system
+    else
+        touch "$HOME/.dotfiles/.system-setup"
+    fi
+
 fi
 
 update_system

@@ -10,29 +10,55 @@ For Windows you must be running at least Windows 10 version 1709 (Fall Creators 
 
 ## Usage
 
-To install these, simply run:
+To install, there are 2 methods.
 
-For \*nix systems:
+### Single Use
+
+This is for single uses. It will not keep track and allow you to commit changes to the dotfiles and
+any changes will need to run the command again.
+
+#### \*nix Systems
+
+Run the following from a terminal:
 
 ```bash
 bash -c "`curl -fsSL https://raw.github.com/RyanTheAllmighty/dotfiles/master/remote-install.sh`"
 ```
 
-For Windows systems run the following from an administrator powershell console:
+#### Windows Systems
 
-```powershell
-.\install.ps1
+TBA
+
+### Long Term Use
+
+This is when you want to continually add and update the dotfiles to a remote repository.
+
+This connects this repository to your local `~/.dotfiles` directory so you can use git to update
+changes to your dotfiles.
+
+In order for this to work, you'll need to make sure you setup your github ssh credentials.
+
+#### \*nix Systems
+
+Run the following from a terminal:
+
+```bash
+bash -c "`curl -fsSL https://raw.github.com/RyanTheAllmighty/dotfiles/master/remote-git-install.sh`"
 ```
+
+#### Windows Systems
+
+TBA
 
 ## Tested Configurations
 
 I've tested this using my own personal rigs which are made up of:
 
-*   Windows 10 Professional
-*   Manjaro Linux Gnome Edition
+* Windows 10 Professional
+* Manjaro Linux Gnome Edition
 
 ## Inspiration
 
 Parts of this repository are inspired from the following repositories:
 
-*   <https://github.com/donnemartin/dev-setup>
+* <https://github.com/donnemartin/dev-setup>
