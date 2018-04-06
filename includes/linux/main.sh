@@ -42,6 +42,9 @@ function setup_system
     # install development tools (node, docker, aws, etc)
     install_development_tools
 
+    # install system tweaks
+    install_system_tweaks
+
     touch "$HOME/.dotfiles/.system-setup"
 }
 
@@ -61,4 +64,9 @@ function install_dotfiles
     link_file linux/.aliases "$HOME/.aliases"
     link_file linux/.hyper.js "$HOME/.hyper.js"
     link_file linux/.zshrc "$HOME/.zshrc"
+}
+
+function install_system_tweaks
+{
+    restore_dconf_settings
 }

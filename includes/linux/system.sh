@@ -22,3 +22,9 @@ function cleanup_unused_files
     rm -rf ~/.jak
     rm -rf ~/.mozilla
 }
+
+# restore my settings from dconf
+function restore_dconf_settings
+{
+    dconf load / < "$HOME/.dotfiles/files/linux/dconf.ini"
+}
