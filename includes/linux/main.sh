@@ -44,7 +44,7 @@ function setup_system
 function update_system
 {
     echo Updating system
-    
+
     # upgrade all packages in pacman
     upgrade_packages
 }
@@ -52,4 +52,6 @@ function update_system
 function install_dotfiles
 {
     echo Installing dotfiles
+
+    link_file linux/.test "$HOME/.test"
 }

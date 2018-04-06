@@ -16,3 +16,8 @@ function get_sudo_access
 {
     sudo -v
 }
+
+function link_file
+{
+    ln -s "$HOME/.dotfiles/files/$1" $2
+}
