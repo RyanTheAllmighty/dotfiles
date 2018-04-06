@@ -1,6 +1,6 @@
 function upgrade_packages
 {
-    sudo pacman -Syu
+    sudo pacman -Syu --noconfirm
 }
 
 # installs a pacman package (if not already installed) and will answer yes to all questions
@@ -37,7 +37,7 @@ function install_trizen
 
     git clone https://aur.archlinux.org/trizen.git
     cd trizen
-    makepkg -si
+    makepkg -si --noconfirm
 
     cd /
     rm -rf /tmp/trizen
