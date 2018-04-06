@@ -2,9 +2,10 @@
 . "$HOME/.dotfiles/includes/linux/pacman.sh"
 . "$HOME/.dotfiles/includes/linux/system.sh"
 
+# this is only run once
 function setup_system
 {
-    echo Installing Linux dotfiles
+    echo Setting up system
 
     # ask for sudo access now to prevent it later
     get_sudo_access
@@ -35,9 +36,20 @@ function setup_system
 
     # install development tools (node, docker, aws, etc)
     install_development_tools
+
+    touch "$HOME/.dotfiles/.system-setup"
+}
+
+# this is run everytime
+function update_system
+{
+    echo Updating system
+    
+    # upgrade all packages in pacman
+    upgrade_packages
 }
 
 function install_dotfiles
 {
-
+    echo Installing dotfiles
 }

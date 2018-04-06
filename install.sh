@@ -14,4 +14,10 @@ case "$OSTYPE" in
     ;;
 esac
 
-setup_system
+if [ ! -f "$HOME/.dotfiles/.system-setup" ]; then
+    setup_system
+fi
+
+update_system
+
+install_dotfiles

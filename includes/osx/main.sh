@@ -1,9 +1,10 @@
 . "$HOME/.dotfiles/includes/osx/system.sh"
 . "$HOME/.dotfiles/includes/osx/homebrew.sh"
 
-function install_dotfiles
+# this is only run once
+function setup_system
 {
-    echo Installing OSX dotfiles
+    echo Setting up system
 
     get_sudo_access
 
@@ -15,4 +16,17 @@ function install_dotfiles
     install_extra_applications
 
     install_zsh
+
+    touch "$HOME/.dotfiles/.system-setup"
+}
+
+# this is run everytime
+function update_system
+{
+    echo Updating system
+}
+
+function install_dotfiles
+{
+    echo Installing dotfiles
 }
