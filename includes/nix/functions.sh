@@ -19,5 +19,5 @@ function get_sudo_access
 
 function link_file
 {
-    ln -s "$HOME/.dotfiles/files/$1" $2
+    ln -sf "$HOME/.dotfiles/files/$1" $2
 }
