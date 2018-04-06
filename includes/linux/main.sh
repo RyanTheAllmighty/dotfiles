@@ -9,6 +9,9 @@ function install_dotfiles
     # ask for sudo access now to prevent it later
     get_sudo_access
 
+    # fix grub bootloader
+    fix_grub_bootloader
+
     # upgrade all packages in pacman
     upgrade_packages
 
@@ -17,6 +20,9 @@ function install_dotfiles
 
     # this removes base applications installed that aren't used
     remove_unused_packages
+
+    # remove unused files
+    cleanup_unused_files
 
     # install Trizen (manages AUR builds)
     install_trizen
@@ -29,7 +35,4 @@ function install_dotfiles
 
     # install development tools (node, docker, aws, etc)
     install_development_tools
-
-    # system tweaks
-    run_system_tweaks
 }

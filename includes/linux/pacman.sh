@@ -30,22 +30,6 @@ function remove_unused_packages
     remove_pacman_package gnome-weather totem uget transmission-gtk gnome-todo lollypop libreoffice-fresh hexchat yelp gnome-maps firefox evolution empathy evince gnome-contacts brasero hplip ms-office-online manjaro-hello
 }
 
-function cleanup_unused_files
-{
-    rm -f ~/Readme
-    rm -rf ~/Public
-    rm -rf ~/.cache/evolution
-    rm -rf ~/.cache/lollypop
-    rm -rf ~/.cache/mozilla
-    rm -rf ~/.cache/ms-office-online
-    rm -rf ~/.config/evolution
-    rm -rf ~/.config/hexchat
-    rm -f ~/.config/manjaro-hello.json
-    rm -rf ~/.hplip
-    rm -rf ~/.jak
-    rm -rf ~/.mozilla
-}
-
 function install_trizen
 {
     mkdir -p /tmp/trizen
