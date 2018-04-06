@@ -30,6 +30,6 @@ function configure_git_user
     echo -n "Email for Git: "
     read git_email
 
-    git config --global user.name git_name
-    git config --global user.email git_email
+    git config --global user.name "$git_name"
+    git config --global user.email "$git_email"
 }
