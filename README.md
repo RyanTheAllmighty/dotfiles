@@ -69,6 +69,10 @@ instead do it from where the file is located.
 To add new files you simply need to put it in the `files` directory and then add it into the correct
 `includes/dotfiles.sh` file.
 
+## Bin Files
+
+The folders within `bin/` are added to the PATH and are made available from the command line.
+
 ## Tested Configurations
 
 I've tested this using my own personal rigs which are made up of:
