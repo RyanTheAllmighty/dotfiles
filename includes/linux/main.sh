@@ -29,7 +29,9 @@ function setup_system
     cleanup_unused_files
 
     # install Trizen (manages AUR builds)
-    install_trizen
+    if [ ! -f /usr/bin/trizen ]; then
+        install_trizen
+    fi
 
     # install zsh and related plugins
     install_zsh
