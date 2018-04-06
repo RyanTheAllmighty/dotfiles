@@ -45,6 +45,7 @@ function install_dotfiles
     echo Installing dotfiles
 
     link_file linux/.aliases "$HOME/.aliases"
+    link_file linux/.gitconfig "$HOME/.gitconfig"
     link_file linux/.hyper.js "$HOME/.hyper.js"
     link_file linux/.zshrc "$HOME/.zshrc"
 }

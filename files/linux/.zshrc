@@ -36,6 +36,9 @@ antigen bundle zsh-users/zsh-syntax-highlighting
 # apply antigen bundles/theme
 antigen apply
 
+# Uncomment the following line to disable bi-weekly auto-update checks.
+DISABLE_AUTO_UPDATE="true"
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
@@ -43,6 +46,12 @@ COMPLETION_WAITING_DOTS="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+    mkdir $ZSH_CACHE_DIR
+fi
 
 export EDITOR='vim'
 
