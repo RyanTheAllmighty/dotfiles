@@ -84,7 +84,6 @@ function install_desktop_applications
     install_aur_package google-chrome
     install_aur_package visual-studio-code-bin
     install_discord
-    install_aur_package gnome-usage
     install_aur_package postman-bin
     install_aur_package gitkraken
     install_aur_package plex-media-player
