@@ -16,14 +16,14 @@ function setup_system
     # fix grub bootloader
     fix_grub_bootloader
 
+    # this removes base applications installed that aren't used
+    remove_unused_packages
+
     # upgrade all packages in pacman
     upgrade_packages
 
     # install some base system packages (such as git, docker etc)
     install_base_system_packages
-
-    # this removes base applications installed that aren't used
-    remove_unused_packages
 
     # remove unused files
     cleanup_unused_files
