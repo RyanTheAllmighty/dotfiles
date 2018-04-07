@@ -69,6 +69,13 @@ function install_zsh
     install_aur_package antigen-git
 }
 
+# installs spotify and playerctl so we can use global media keys to control
+function install_spotify
+{
+    install_aur_package spotify
+    install_pacman_package playerctl
+}
+
 # Discord has some issues at the moment which needs a small workaround
 function install_discord
 {
@@ -97,7 +104,7 @@ function install_keybase
 function install_desktop_applications
 {
     install_aur_package hyper-bin
-    install_aur_package spotify
+    install_spotify
     install_aur_package google-chrome
     install_aur_package visual-studio-code-bin
     install_discord
