@@ -77,6 +77,23 @@ function install_discord
     install_aur_package discord
 }
 
+function install_albert
+{
+    install_aur_package albert-lite
+
+    # autostart on login
+    ln -sf /usr/share/applications/albert.desktop  ~/.config/autostart/albert.desktop
+}
+
+function install_keybase
+{
+    install_aur_package keybase-bin
+    run_keybase
+
+    # remove the autostart entry
+    rm -f ~/.config/autostart/keybase_autostart.desktop
+}
+
 function install_desktop_applications
 {
     install_aur_package hyper-bin
@@ -87,13 +104,10 @@ function install_desktop_applications
     install_aur_package postman-bin
     install_aur_package gitkraken
     install_aur_package plex-media-player
-    install_aur_package albert-lite
     install_aur_package ratslap
-
-    install_aur_package keybase-bin
-    run_keybase
-
     install_aur_package wakatime
+    install_albert
+    install_keybase
 }
 
 function install_docker
