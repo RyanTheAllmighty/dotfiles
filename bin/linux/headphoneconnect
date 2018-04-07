@@ -1,5 +1,11 @@
 #!/bin/bash
 
 bluetoothctl << EOF
+disconnect 04:5D:4B:66:71:3A
+EOF
+
+sleep 3
+
+bluetoothctl << EOF
 connect 04:5D:4B:66:71:3A
 EOF
