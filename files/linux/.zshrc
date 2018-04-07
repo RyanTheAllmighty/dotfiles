@@ -30,7 +30,7 @@ antigen bundle robbyrussell/oh-my-zsh plugins/vagrant
 # custom plugins
 antigen bundle lukechilds/zsh-nvm
 antigen bundle lukechilds/zsh-better-npm-completion
-antigen bundle wbingli/zsh-wakatime
+antigen bundle sobolevn/zsh-wakatime
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bobsoppe/zsh-ssh-agent
 

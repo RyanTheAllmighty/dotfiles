@@ -92,6 +92,8 @@ function install_desktop_applications
 
     install_aur_package keybase-bin
     run_keybase
+
+    install_aur_package wakatime
 }
 
 function install_docker
