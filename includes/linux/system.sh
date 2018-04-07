@@ -14,3 +14,14 @@ function cleanup_unused_files
     rm -rf ~/.jak
     rm -rf ~/.mozilla
 }
+
+# this will configure things to make sure that the bluetooth headsets will work properly
+function configure_bluetooth_headset
+{
+    install_pacman_package pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils
+
+    sudo sh -c "printf \"\n# automatically switch to newly-connected devices\nload-module module-switch-on-connect\n\" >> /etc/pulse/default.pa"
+
+    sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
+}
+

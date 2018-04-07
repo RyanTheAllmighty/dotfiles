@@ -31,6 +31,9 @@ function setup_system
     # install appearance tweaks
     install_appearance_tweaks
 
+    # make sure bluetooth headsets work
+    configure_bluetooth_headset
+
     touch "$HOME/.dotfiles/.system-setup"
 }
 
