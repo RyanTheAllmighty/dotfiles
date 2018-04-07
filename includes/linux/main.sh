@@ -44,6 +44,9 @@ function update_system
 
     # upgrade all packages in pacman
     upgrade_packages
+
+    # make sure bin is latest
+    install_bin linux/headphoneconnect
 }
 
 function install_dotfiles

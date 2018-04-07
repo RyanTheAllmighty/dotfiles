@@ -18,9 +18,10 @@ function cleanup_unused_files
 # this will configure things to make sure that the bluetooth headsets will work properly
 function configure_bluetooth_headset
 {
-    install_pacman_package pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils
+    install_pacman_package pulseaudio-alsa pulseaudio-bluetooth bluez bluez-libs bluez-utils pavucontrol-qt
 
     sudo sh -c "printf \"\n# automatically switch to newly-connected devices\nload-module module-switch-on-connect\n\" >> /etc/pulse/default.pa"
+    sudo sh -c "printf \"\n# load bluez5\nload-module module-bluez5-device\nload-module module-bluez5-discover\n\" >> /etc/pulse/system.pa"
 
     sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
 }
