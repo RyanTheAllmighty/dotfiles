@@ -87,6 +87,7 @@ function install_desktop_applications
     install_aur_package postman-bin
     install_aur_package gitkraken
     install_aur_package plex-media-player
+    install_aur_package albert-lite
 }
 
 function install_docker
