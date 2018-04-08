@@ -143,6 +143,7 @@ function install_development_tools
 {
     install_docker
 
+    mkdir -p "$HOME/.nvm"
     install_nodejs_fake
 
     install_pacman_package aws-cli
