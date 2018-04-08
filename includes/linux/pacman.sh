@@ -82,6 +82,9 @@ function install_discord
     gpg --recv-keys B6C8F98282B944E3B0D5C2530FC3042E345AD05D
     install_aur_package libc++
     install_aur_package discord
+
+    # autostart on login
+    ln -sf /usr/share/applications/Discord.desktop  ~/.config/autostart/Discord.desktop
 }
 
 function install_albert
