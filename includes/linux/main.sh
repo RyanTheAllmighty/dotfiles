@@ -42,6 +42,9 @@ function update_system
 {
     echo Updating system
 
+    # make sure base system packages are installed
+    install_base_system_packages
+
     # upgrade all packages in pacman
     upgrade_packages
 
