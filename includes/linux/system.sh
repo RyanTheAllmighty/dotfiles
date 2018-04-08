@@ -26,3 +26,9 @@ function configure_bluetooth_headset
     sudo sed -i 's|#AutoEnable=false|AutoEnable=true|g' /etc/bluetooth/main.conf
 }
 
+function disable_unused_services
+{
+    # yeah don't need search, a npm install will lock my system for 10+ minutes
+    balooctl stop
+    balooctl disable
+}

@@ -45,6 +45,9 @@ function update_system
     # upgrade all packages in pacman
     upgrade_packages
 
+    # disable_unused_services
+    disable_unused_services
+
     # make sure bin is latest
     install_bin linux/headphoneconnect
 }
