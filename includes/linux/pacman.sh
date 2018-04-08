@@ -125,12 +125,28 @@ function install_docker
     sudo systemctl enable --now docker
 }
 
+# installs a fake node and npm package since we use nvm to manage these
+function install_nodejs_fake
+{
+    mkdir -p /tmp/nodejs-fake
+    cd /tmp/nodejs-fake
+
+    curl -L https://github.com/RyanTheAllmighty/archlinux-packages/archive/master.tar.gz | tar xvz archlinux-packages-master/packages/nodejs-fake --strip 3
+
+    makepkg -sif --noconfirm --needed
+
+    rm -rf /tmp/nodejs-fake
+}
+
 # install development tools needed
 function install_development_tools
 {
     install_docker
 
+    install_nodejs_fake
+
     install_pacman_package aws-cli
+    install_pacman_package yarn
 }
 
 function install_appearance_tweaks
