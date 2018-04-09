@@ -66,6 +66,9 @@ function install_command_line_utilities
     brew install speedtest_cli
     brew install ssh-copy-id
     brew install tree
+    brew install gnupg
+    brew install gnupg2
+    brew install pinentry-mac
 }
 
 function install_applications
@@ -102,6 +105,9 @@ function install_zsh
 
     echo Installing Oh My Zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+    touch "$HOME/.environment"
+    echo "GPG_TTY=$( tty )" >> "$HOME/.environment"
 
     brew install antigen
 
