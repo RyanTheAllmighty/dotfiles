@@ -2,5 +2,9 @@
     email = ryan@ryandowling.me
     name = Ryan Dowling
     signingKey = 5539FCDB88950EFD
+[push]
+    default = upstream
+[core]
+    editor = vim
 [commit]
     gpgSign = true
