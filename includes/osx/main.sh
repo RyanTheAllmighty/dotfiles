@@ -32,4 +32,7 @@ function update_system
 function install_dotfiles
 {
     echo Installing dotfiles
+
+    link_file nix/.hyper.js "$HOME/.hyper.js"
+    link_file nix/.nvm/default-packages "$HOME/.nvm/default-packages"
 }
