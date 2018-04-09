@@ -1,8 +1,10 @@
 # path to oh-my-zsh installation
-export ZSH=/usr/share/oh-my-zsh
+[[ -d /usr/share/oh-my-zsh ]] && export ZSH=/usr/share/oh-my-zsh
+[[ -d $HOME/.oh-my-zsh ]] && export ZSH=$HOME/.oh-my-zsh
 
 # add in antigen
-source /usr/share/zsh/share/antigen.zsh
+[[ -f /usr/share/zsh/share/antigen.zsh ]] && source /usr/share/zsh/share/antigen.zsh
+[[ -f /usr/local/share/antigen/antigen.zsh ]] && source /usr/local/share/antigen/antigen.zsh
 
 # nvm configuration
 export NVM_LAZY_LOAD=true
@@ -37,13 +39,22 @@ antigen bundle bobsoppe/zsh-ssh-agent
 # apply antigen bundles/theme
 antigen apply
 
-# Uncomment the following line to disable bi-weekly auto-update checks.
+# export environment variables
+export LANG=en_AU.UTF-8
+export EDITOR='vim'
+
+# import seperate environment file if it exists
+if [ -f ~/.environment ]; then
+    . ~/.environment
+fi
+
+# uncomment the following line to disable bi-weekly auto-update checks.
 DISABLE_AUTO_UPDATE="true"
 
-# Uncomment the following line to display red dots whilst waiting for completion.
+# uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
 
-# Uncomment the following line if you want to disable marking untracked files
+# uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -51,10 +62,10 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
-    mkdir $ZSH_CACHE_DIR
+    mkdir -p $ZSH_CACHE_DIR
 fi
 
-export EDITOR='vim'
-
-# import aliases
-. ~/.aliases
+# import seperate aliases file if it exists
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
+fi
