@@ -120,6 +120,11 @@ function install_desktop_applications
     install_keybase
 }
 
+function install_other_applications
+{
+    install_aur_package otf-fira-code
+}
+
 function install_docker
 {
     install_pacman_package docker

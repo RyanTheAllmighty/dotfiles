@@ -25,6 +25,9 @@ function setup_system
     # install desktop applications
     install_desktop_applications
 
+    # install other applications
+    install_other_applications
+
     # install development tools (node, docker, aws, etc)
     install_development_tools
 
