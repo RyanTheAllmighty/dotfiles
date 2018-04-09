@@ -27,6 +27,17 @@ function setup_system
 function update_system
 {
     echo Updating system
+
+    # update brew
+    brew update
+
+    # upgrade outdated then cleanup unused
+    brew upgrade
+    brew cleanup
+
+    # do the same for casks
+    brew cask upgrade
+    brew cask cleanup
 }
 
 function install_dotfiles
