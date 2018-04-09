@@ -142,7 +142,6 @@ module.exports = {
     //   `project#1.0.1`
     plugins: [
         'hypercwd',
-        'hyperline',
         'hyperterm-alternatescroll',
         'hyperterm-tabs',
         'hyperlinks',
