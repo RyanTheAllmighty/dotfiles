@@ -6,5 +6,6 @@
     default = upstream
 [core]
     editor = vim
+    pager = diff-so-fancy | less -FXRi
 [commit]
     gpgSign = true

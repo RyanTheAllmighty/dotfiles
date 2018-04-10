@@ -24,17 +24,26 @@ antigen bundle robbyrussell/oh-my-zsh plugins/autojump
 antigen bundle robbyrussell/oh-my-zsh plugins/aws
 antigen bundle robbyrussell/oh-my-zsh plugins/docker
 antigen bundle robbyrussell/oh-my-zsh plugins/docker-compose
+antigen bundle robbyrussell/oh-my-zsh plugins/gpg-agent
 antigen bundle robbyrussell/oh-my-zsh plugins/npm
 antigen bundle robbyrussell/oh-my-zsh plugins/perms
 antigen bundle robbyrussell/oh-my-zsh plugins/thefuck
 antigen bundle robbyrussell/oh-my-zsh plugins/vagrant
 
 # custom plugins
-antigen bundle lukechilds/zsh-nvm
-antigen bundle lukechilds/zsh-better-npm-completion
-antigen bundle sobolevn/zsh-wakatime
-antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle bobsoppe/zsh-ssh-agent
+antigen bundle chrissicool/zsh-256color
+antigen bundle lukechilds/zsh-better-npm-completion
+antigen bundle lukechilds/zsh-nvm
+antigen bundle michaelxmcbride/zsh-dircycle
+antigen bundle peterhurford/git-it-on.zsh
+antigen bundle rawkode/zsh-docker-run
+antigen bundle sobolevn/wakatime-zsh-plugin
+antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma/zsh-diff-so-fancy
+antigen bundle zpm-zsh/colors
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle walesmd/caniuse.plugin.zsh
 
 # apply antigen bundles/theme
 antigen apply
