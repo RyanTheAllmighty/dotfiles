@@ -69,6 +69,10 @@ function install_command_line_utilities
     brew install gnupg
     brew install gnupg2
     brew install pinentry-mac
+
+    # fonts
+    brew tap caskroom/fonts
+    brew cask install font-fira-code
 }
 
 function install_applications
