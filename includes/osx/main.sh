@@ -44,8 +44,8 @@ function install_dotfiles
 {
     echo Installing dotfiles
 
-    link_file nix/.gnupg/gpg.conf "$HOME/.gnupg/gpg.conf"
-    link_file nix/.gnupg/gpg-agent.conf "$HOME/.gnupg/gpg-agent.conf"
+    link_file osx/.gnupg/gpg.conf "$HOME/.gnupg/gpg.conf"
+    link_file osx/.gnupg/gpg-agent.conf "$HOME/.gnupg/gpg-agent.conf"
 
     link_file nix/.hyper.js "$HOME/.hyper.js"
     link_file nix/.nvm/default-packages "$HOME/.nvm/default-packages"
