@@ -92,6 +92,10 @@ function install_applications
     brew cask install --appdir="~/Applications" gitkraken
     brew cask install --appdir="~/Applications" istat-menus
     brew cask install --appdir="~/Applications" spotify
+    brew cask install --appdir="~/Applications" teamsql
+    brew cask install --appdir="~/Applications" spectacle
+    brew cask install --appdir="~/Applications" cinch
+    brew cask install --appdir="~/Applications" todoist
 }
 
 function install_extra_applications
