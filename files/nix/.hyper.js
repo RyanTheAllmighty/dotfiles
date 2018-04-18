@@ -134,12 +134,7 @@ module.exports = {
         },
     },
 
-    // a list of plugins to fetch and install from npm
-    // format: [@org/]project[#version]
-    // examples:
-    //   `hyperpower`
-    //   `@company/project`
-    //   `project#1.0.1`
+    // 2.0.0 no longer works with hyperborder
     plugins: [
         'hypercwd',
         'hyperterm-alternatescroll',
@@ -149,7 +144,6 @@ module.exports = {
         'hyper-alt-click',
         'hyper-broadcast',
         'hyper-blink',
-        'hyperborder',
         'hyper-dracula',
         'hyper-tabs-enhanced',
         'hyper-disable-new-version-notification',
