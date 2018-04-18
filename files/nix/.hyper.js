@@ -30,7 +30,7 @@ module.exports = {
         cursorShape: 'BLOCK',
 
         // set to `true` (without backticks and without quotes) for blinking cursor
-        cursorBlink: false,
+        cursorBlink: true,
 
         // color of the text
         foregroundColor: '#fff',
@@ -123,30 +123,24 @@ module.exports = {
         // bellSoundURL: 'http://example.com/bell.mp3',
 
         // for advanced config flags please refer to https://hyper.is/#cfg
-
         hyperTabs: {
-            tabIconsColored: true,
+            trafficButtons: true,
             border: true,
+            tabIconsColored: true,
+            closeAlign: 'right',
         },
 
-        hyperline: {
-            plugins: ['memory', 'cpu', 'network'],
-        },
     },
 
-    // 2.0.0 no longer works with hyperborder
+    // 'hyperborder',
+    // 'hyper-disable-new-version-notification',
     plugins: [
+        'hyper-one-dark',
         'hypercwd',
-        'hyperterm-alternatescroll',
-        'hyperterm-tabs',
-        'hyperlinks',
+        'hyper-tabs-enhanced',
+        'hyper-broadcast',
         'hyper-statusline',
         'hyper-alt-click',
-        'hyper-broadcast',
-        'hyper-blink',
-        'hyper-dracula',
-        'hyper-tabs-enhanced',
-        'hyper-disable-new-version-notification',
     ],
 
     // in development, you can create a directory under
