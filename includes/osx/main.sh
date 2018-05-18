@@ -16,7 +16,7 @@ function setup_system
     install_homebrew
     install_command_line_utilities
     install_applications
-    install_extra_applications
+    install_global_applications
 
     install_zsh
 

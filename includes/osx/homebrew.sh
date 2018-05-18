@@ -79,33 +79,33 @@ function install_command_line_utilities
 function install_applications
 {
     # Install applications
-    brew cask install --appdir="~/Applications" alfred
-    brew cask install --appdir="~/Applications" visual-studio-code
-    brew cask install --appdir="~/Applications" google-chrome
-    brew cask install --appdir="~/Applications" firefox
     brew cask install --appdir="~/Applications" 1password
-    brew cask install --appdir="~/Applications" docker
-    brew cask install --appdir="~/Applications" hyper
-    brew cask install --appdir="~/Applications" postman
+    brew cask install --appdir="~/Applications" alfred
     brew cask install --appdir="~/Applications" bartender
     brew cask install --appdir="~/Applications" beardedspice
+    brew cask install --appdir="~/Applications" cinch
     brew cask install --appdir="~/Applications" discord
+    brew cask install --appdir="~/Applications" docker
+    brew cask install --appdir="~/Applications" firefox
     brew cask install --appdir="~/Applications" gitkraken
+    brew cask install --appdir="~/Applications" google-chrome
+    brew cask install --appdir="~/Applications" hyper
     brew cask install --appdir="~/Applications" istat-menus
+    brew cask install --appdir="~/Applications" postman
+    brew cask install --appdir="~/Applications" spectacle
     brew cask install --appdir="~/Applications" spotify
     brew cask install --appdir="~/Applications" teamsql
-    brew cask install --appdir="~/Applications" spectacle
-    brew cask install --appdir="~/Applications" cinch
-    brew cask install --appdir="~/Applications" todoist
+    brew cask install --appdir="~/Applications" visual-studio-code
 }
 
-function install_extra_applications
+function install_global_applications
 {
-    # Install extra applications
-    brew cask install --appdir="~/Applications" hipchat
-    brew cask install --appdir="~/Applications" virtualbox
-    brew cask install --appdir="~/Applications" vagrant
-    brew cask install --appdir="~/Applications" iterm2
+    # Install global applications
+    brew cask install --appdir="/Applications" hipchat
+    brew cask install --appdir="/Applications" iterm2
+    brew cask install --appdir="/Applications" pgadmin4
+    brew cask install --appdir="/Applications" vagrant
+    brew cask install --appdir="/Applications" virtualbox
 }
 
 function install_zsh
