@@ -132,9 +132,9 @@ module.exports = {
 
     },
 
-    // 'hyperborder',
     // 'hyper-disable-new-version-notification',
     plugins: [
+        'hyperborder',
         'hyper-one-dark',
         'hypercwd',
         'hyper-tabs-enhanced',
