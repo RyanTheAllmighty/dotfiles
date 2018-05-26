@@ -6,7 +6,11 @@ case "$OSTYPE" in
     . "$HOME/.dotfiles/includes/osx/main.sh"
     ;;
   linux*)
-    . "$HOME/.dotfiles/includes/linux/main.sh"
+    if [ -f "/mnt/c/pagefile.sys" ]; then
+        . "$HOME/.dotfiles/includes/wsl/main.sh"
+    else
+        . "$HOME/.dotfiles/includes/linux/main.sh"
+    fi
     ;;
   *)
     echo "Unsupported OS type. Exiting" 1>&2

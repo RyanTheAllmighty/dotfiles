@@ -8,13 +8,15 @@ For \*nix systems there are no prerequisites.
 
 For Windows you must be running at least Windows 10 version 1709 (Fall Creators Update).
 
+For Windows Subsystem for Linux you must be running Ubuntu 18.04.
+
 ## Usage
 
 To install, there are 2 methods.
 
 ### Single Use
 
-This is for single uses. It will not keep track and allow you to commit changes to the dotfiles and
+This is for single use. It will not keep track and allow you to commit changes to the dotfiles and
 any changes will need to run the command again.
 
 #### \*nix Systems
