@@ -6,7 +6,7 @@ case "$OSTYPE" in
     . "$HOME/.dotfiles/includes/osx/main.sh"
     ;;
   linux*)
-    if [ -f "/mnt/c/pagefile.sys" ]; then
+    if [ -d "/mnt/c/Windows" ]; then
         . "$HOME/.dotfiles/includes/wsl/main.sh"
     else
         . "$HOME/.dotfiles/includes/linux/main.sh"
