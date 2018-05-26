@@ -26,10 +26,6 @@ function install_base_system_packages
     install_package git git-lfs python vim tree speedtest-cli p7zip build-essential iotop curl
 }
 
-function remove_unused_packages
-{
-}
-
 function install_zsh
 {
     install_package zsh autojump thefuck
@@ -37,10 +33,6 @@ function install_zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
     install_package zsh-antigen
-}
-
-function install_other_applications
-{
 }
 
 function install_yarn

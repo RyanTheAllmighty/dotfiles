@@ -1,14 +1,10 @@
 . "$HOME/.dotfiles/includes/nix/functions.sh"
 . "$HOME/.dotfiles/includes/wsl/apt.sh"
-. "$HOME/.dotfiles/includes/wsl/system.sh"
 
 # this is only run once
 function setup_system
 {
     echo Setting up system
-
-    # this removes base applications installed that aren't used
-    remove_unused_packages
 
     # upgrade all packages
     upgrade_packages
@@ -21,9 +17,6 @@ function setup_system
 
     # install zsh and related plugins
     install_zsh
-
-    # install other applications
-    install_other_applications
 
     # install development tools (node, docker, aws, etc)
     install_development_tools
