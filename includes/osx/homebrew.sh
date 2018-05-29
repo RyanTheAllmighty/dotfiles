@@ -92,6 +92,7 @@ function install_applications
     brew cask install --appdir="~/Applications" hyper
     brew cask install --appdir="~/Applications" istat-menus
     brew cask install --appdir="~/Applications" postman
+    brew cask install --appdir="~/Applications" slack
     brew cask install --appdir="~/Applications" spectacle
     brew cask install --appdir="~/Applications" spotify
     brew cask install --appdir="~/Applications" teamsql
