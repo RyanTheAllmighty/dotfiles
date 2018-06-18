@@ -87,3 +87,19 @@ fi
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
+
+if type "_awsp" > /dev/null; then
+    alias awsp="source _awsp"
+
+    function aws_prof {
+        local profile="${AWS_PROFILE}"
+
+        if [[ -z "${profile}" ]]
+        then echo ""
+        else echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
+        fi
+    }
+
+    PROMPT='$(_user_host)${_current_dir}$(aws_prof) $(git_prompt_info) $(_ruby_version)
+%{$fg[$CARETCOLOR]%}▶%{$resetcolor%}'
+fi
