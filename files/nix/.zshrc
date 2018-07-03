@@ -7,14 +7,23 @@
 [[ -f /usr/local/share/antigen/antigen.zsh ]] && source /usr/local/share/antigen/antigen.zsh
 
 # nvm configuration
-export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD=false
 export NVM_AUTO_USE=true
+
+# spaceship theme options
+export SPACESHIP_PACKAGE_SHOW=false
+export SPACESHIP_NODE_SHOW=false
+export SPACESHIP_EXIT_CODE_SHOW=true
+
+# awsp configuration
+export AWSP_FILE_TO_READ='~/.aws/credentials';
+export AWSP_USE_CREDENTIALS=true;
 
 # enable oh-my-zsh
 antigen use oh-my-zsh
 
 # set the theme
-antigen theme avit
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 # zsh default plugins
 antigen bundle git
@@ -90,16 +99,4 @@ fi
 
 if type "_awsp" > /dev/null; then
     alias awsp="source _awsp"
-
-    function aws_prof {
-        local profile="${AWS_PROFILE}"
-
-        if [[ -z "${profile}" ]]
-        then echo ""
-        else echo "%{$fg_bold[blue]%}aws:(%{$fg[yellow]%}${profile}%{$fg_bold[blue]%})%{$reset_color%} "
-        fi
-    }
-
-    PROMPT='$(_user_host)${_current_dir}$(aws_prof) $(git_prompt_info) $(_ruby_version)
-%{$fg[$CARETCOLOR]%}▶%{$resetcolor%}'
 fi
