@@ -103,7 +103,6 @@ function install_applications
 function install_global_applications
 {
     # Install global applications
-    brew cask install --appdir="/Applications" hipchat
     brew cask install --appdir="/Applications" iterm2
     brew cask install --appdir="/Applications" pgadmin4
     brew cask install --appdir="/Applications" vagrant
