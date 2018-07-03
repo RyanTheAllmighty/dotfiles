@@ -1,5 +1,6 @@
 . "$HOME/.dotfiles/includes/osx/system.sh"
 . "$HOME/.dotfiles/includes/osx/homebrew.sh"
+. "$HOME/.dotfiles/includes/nix/pip.sh"
 
 # this is only run once
 function setup_system
@@ -17,6 +18,7 @@ function setup_system
     install_command_line_utilities
     install_applications
     install_global_applications
+    install_pip_applications
 
     install_zsh
 

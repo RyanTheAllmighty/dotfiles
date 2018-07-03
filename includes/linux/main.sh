@@ -1,6 +1,7 @@
 . "$HOME/.dotfiles/includes/nix/functions.sh"
 . "$HOME/.dotfiles/includes/linux/pacman.sh"
 . "$HOME/.dotfiles/includes/linux/system.sh"
+. "$HOME/.dotfiles/includes/nix/pip.sh"
 
 # this is only run once
 function setup_system
@@ -30,6 +31,9 @@ function setup_system
 
     # install development tools (node, docker, aws, etc)
     install_development_tools
+
+    # install PIP applications
+    install_pip_applications
 
     # install appearance tweaks
     install_appearance_tweaks
