@@ -112,7 +112,6 @@ function install_desktop_applications
     install_aur_package visual-studio-code-bin
     install_discord
     install_aur_package postman-bin
-    install_aur_package gitkraken
     install_aur_package plex-media-player
     install_aur_package ratslap
     install_aur_package wakatime

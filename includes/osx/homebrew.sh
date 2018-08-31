@@ -88,7 +88,6 @@ function install_applications
     brew cask install --appdir="~/Applications" discord
     brew cask install --appdir="~/Applications" docker
     brew cask install --appdir="~/Applications" firefox
-    brew cask install --appdir="~/Applications" gitkraken
     brew cask install --appdir="~/Applications" google-chrome
     brew cask install --appdir="~/Applications" hyper
     brew cask install --appdir="~/Applications" istat-menus
@@ -104,7 +103,6 @@ function install_global_applications
 {
     # Install global applications
     brew cask install --appdir="/Applications" iterm2
-    brew cask install --appdir="/Applications" pgadmin4
     brew cask install --appdir="/Applications" vagrant
     brew cask install --appdir="/Applications" virtualbox
 }
