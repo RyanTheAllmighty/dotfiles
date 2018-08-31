@@ -108,3 +108,7 @@ fi
 if type "prettyping" > /dev/null; then
     alias ping="prettyping --nolegend"
 fi
+
+if type "tldr" > /dev/null; then
+    alias tldr="tldr --theme ocean"
+fi
