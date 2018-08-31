@@ -1,3 +1,4 @@
+. "$HOME/.dotfiles/includes/nix/functions.sh"
 . "$HOME/.dotfiles/includes/osx/system.sh"
 . "$HOME/.dotfiles/includes/osx/homebrew.sh"
 . "$HOME/.dotfiles/includes/nix/pip.sh"
@@ -20,6 +21,8 @@ function setup_system
     install_global_applications
     install_pip_applications
 
+    install_prettyping
+
     install_zsh
 
     touch "$HOME/.dotfiles/.system-setup"
@@ -39,7 +42,7 @@ function update_system
 
     # do the same for casks
     brew cask upgrade
-    brew cask cleanup
+    brew cleanup
 }
 
 function install_dotfiles

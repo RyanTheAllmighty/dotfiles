@@ -104,3 +104,7 @@ fi
 if type "bat" > /dev/null; then
     alias cat="bat"
 fi
+
+if type "prettyping" > /dev/null; then
+    alias ping="prettyping --nolegend"
+fi

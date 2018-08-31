@@ -24,6 +24,22 @@ function link_file
 
 function install_bin
 {
-    chmod +x "$HOME/.dotfiles/bin/$1"
-    cp -f "$HOME/.dotfiles/bin/$1" /usr/local/bin/${1##*/}
+    FINAL_FILE=/usr/local/bin/${1##*/}
+
+    cp -f $1 $FINAL_FILE
+    chmod +x $FINAL_FILE
+}
+
+function install_local_bin
+{
+    install_bin "$HOME/.dotfiles/bin/$1"
+}
+
+function install_prettyping
+{
+    curl -O https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
+
+    install_bin prettyping
+
+    rm -f prettyping
 }

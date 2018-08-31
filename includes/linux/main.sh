@@ -35,6 +35,9 @@ function setup_system
     # install PIP applications
     install_pip_applications
 
+    # install PrettyPing
+    install_prettyping
+
     # install appearance tweaks
     install_appearance_tweaks
 
@@ -59,7 +62,7 @@ function update_system
     disable_unused_services
 
     # make sure bin is latest
-    install_bin linux/headphoneconnect
+    install_local_bin linux/headphoneconnect
 }
 
 function install_dotfiles
