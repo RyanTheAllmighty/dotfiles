@@ -71,6 +71,7 @@ function install_command_line_utilities
     brew install gnupg2
     brew install pinentry-mac
     brew install watch
+    brew install bat
 
     # fonts
     brew tap caskroom/fonts

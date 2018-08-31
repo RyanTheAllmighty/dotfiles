@@ -100,3 +100,7 @@ fi
 if type "_awsp" > /dev/null; then
     alias awsp="source _awsp"
 fi
+
+if type "bat" > /dev/null; then
+    alias cat="bat"
+fi
