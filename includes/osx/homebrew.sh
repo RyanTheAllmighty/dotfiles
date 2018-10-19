@@ -72,6 +72,10 @@ function install_command_line_utilities
     brew install pinentry-mac
     brew install watch
     brew install bat
+    brew install terraform
+    brew install jq
+    brew install wireguard-tools
+    brew cask install minikube
 
     # fonts
     brew tap caskroom/fonts
