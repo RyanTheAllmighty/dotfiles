@@ -52,6 +52,7 @@ antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zpm-zsh/colors
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle walesmd/caniuse.plugin.zsh
+antigen bundle zpm-zsh/autoenv
 
 # apply antigen bundles/theme
 antigen apply
