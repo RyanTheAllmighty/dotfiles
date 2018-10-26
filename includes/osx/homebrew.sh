@@ -75,6 +75,10 @@ function install_command_line_utilities
     brew install terraform
     brew install jq
     brew install wireguard-tools
+
+    ## kubernetes things
+    brew install kubernetes-cli
+    brew install kubernetes-helm
     brew cask install minikube
 
     # fonts
