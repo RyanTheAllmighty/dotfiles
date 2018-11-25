@@ -75,7 +75,7 @@ function install_command_line_utilities
     brew install terraform
     brew install jq
 
-    ## kubernetes things
+    # kubernetes things
     brew install kubernetes-cli
     brew install kubernetes-helm
     brew cask install minikube
@@ -83,6 +83,10 @@ function install_command_line_utilities
     # fonts
     brew tap caskroom/fonts
     brew cask install font-fira-code
+
+    # wagoodman/dive
+    brew tap wagoodman/dive
+    brew install dive
 }
 
 function install_applications
