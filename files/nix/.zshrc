@@ -71,7 +71,7 @@ fi
 
 # export environment variables
 export LANG=en_AU.UTF-8
-export EDITOR='vim'
+export EDITOR='code-insiders --wait'
 
 # import seperate environment file if it exists
 if [ -f ~/.environment ]; then
@@ -108,6 +108,10 @@ if type "bat" > /dev/null; then
     alias cat="bat"
 fi
 
+if type "code-insiders" > /dev/null; then
+    alias code="code-insiders"
+fi
+
 if type "prettyping" > /dev/null; then
     alias ping="prettyping --nolegend"
 fi
@@ -115,3 +119,5 @@ fi
 if type "tldr" > /dev/null; then
     alias tldr="tldr --theme ocean"
 fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
