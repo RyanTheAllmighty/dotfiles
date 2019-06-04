@@ -9,6 +9,10 @@ function install_homebrew
         ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     fi
 
+    # Tap a few casks
+    brew tap homebrew/cask
+    brew tap homebrew/cask-versions
+
     # Make sure we’re using the latest Homebrew.
     brew update
 
@@ -99,7 +103,7 @@ function install_applications
     brew cask install --appdir="~/Applications" cinch
     brew cask install --appdir="~/Applications" discord
     brew cask install --appdir="~/Applications" docker
-    brew cask install --appdir="~/Applications" firefox
+    brew cask install --appdir="~/Applications" firefox-developer-edition
     brew cask install --appdir="~/Applications" google-chrome
     brew cask install --appdir="~/Applications" hyper
     brew cask install --appdir="~/Applications" istat-menus
@@ -107,8 +111,7 @@ function install_applications
     brew cask install --appdir="~/Applications" slack
     brew cask install --appdir="~/Applications" spectacle
     brew cask install --appdir="~/Applications" spotify
-    brew cask install --appdir="~/Applications" teamsql
-    brew cask install --appdir="~/Applications" visual-studio-code
+    brew cask install --appdir="~/Applications" visual-studio-code-insiders
 }
 
 function install_global_applications
