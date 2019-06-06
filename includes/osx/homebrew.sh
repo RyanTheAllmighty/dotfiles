@@ -111,7 +111,7 @@ function install_applications
     brew cask install --appdir="~/Applications" slack
     brew cask install --appdir="~/Applications" spectacle
     brew cask install --appdir="~/Applications" spotify
-    brew cask install --appdir="~/Applications" visual-studio-code-insiders
+    brew cask install --appdir="~/Applications" visual-studio-code
 }
 
 function install_global_applications

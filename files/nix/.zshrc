@@ -71,7 +71,7 @@ fi
 
 # export environment variables
 export LANG=en_AU.UTF-8
-export EDITOR='code-insiders --wait'
+export EDITOR='code --wait'
 
 # import seperate environment file if it exists
 if [ -f ~/.environment ]; then
@@ -106,10 +106,6 @@ fi
 
 if type "bat" > /dev/null; then
     alias cat="bat"
-fi
-
-if type "code-insiders" > /dev/null; then
-    alias code="code-insiders"
 fi
 
 if type "prettyping" > /dev/null; then
