@@ -1,6 +1,6 @@
 . "$HOME/.dotfiles/includes/nix/functions.sh"
-. "$HOME/.dotfiles/includes/linux/pacman.sh"
-. "$HOME/.dotfiles/includes/linux/system.sh"
+. "$HOME/.dotfiles/includes/linux/manjaro/pacman.sh"
+. "$HOME/.dotfiles/includes/linux/manjaro/system.sh"
 . "$HOME/.dotfiles/includes/nix/pip.sh"
 
 # this is only run once
