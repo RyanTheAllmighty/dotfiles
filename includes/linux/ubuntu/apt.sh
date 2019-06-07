@@ -20,5 +20,5 @@ function install_zsh
 
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     sudo mkdir -p /usr/local/share/antigen/
-    sudo wget -o /usr/local/share/antigen/antigen.zsh https://git.io/antigen
+    sudo wget -O /usr/local/share/antigen/antigen.zsh https://git.io/antigen
 }
