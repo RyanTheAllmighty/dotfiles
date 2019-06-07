@@ -9,7 +9,7 @@ case "$OSTYPE" in
     if [ -d "/mnt/c/Windows" ]; then
         . "$HOME/.dotfiles/includes/wsl/main.sh"
     else
-        if [`lsb_release -is` -eq "Ubuntu"]
+        if [`lsb_release -is` -eq "Ubuntu"]; then
             . "$HOME/.dotfiles/includes/linux/ubuntu/main.sh"
         else
             . "$HOME/.dotfiles/includes/linux/manjaro/main.sh"
