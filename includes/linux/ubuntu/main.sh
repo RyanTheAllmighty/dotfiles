@@ -34,6 +34,8 @@ function install_dotfiles
 {
     echo Installing dotfiles
 
+    mkdir -p "$HOME/.nvm"
+
     link_file linux/.aliases "$HOME/.aliases"
     link_file linux/.gitconfig "$HOME/.gitconfig"
 
