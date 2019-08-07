@@ -6,10 +6,6 @@
 [[ -f /usr/share/zsh/share/antigen.zsh ]] && source /usr/share/zsh/share/antigen.zsh
 [[ -f /usr/local/share/antigen/antigen.zsh ]] && source /usr/local/share/antigen/antigen.zsh
 
-# nvm configuration
-export NVM_LAZY_LOAD=false
-export NVM_AUTO_USE=true
-
 # spaceship theme options
 export SPACESHIP_PACKAGE_SHOW=false
 export SPACESHIP_NODE_SHOW=false
@@ -45,7 +41,6 @@ antigen bundle robbyrussell/oh-my-zsh plugins/vagrant
 antigen bundle bobsoppe/zsh-ssh-agent
 antigen bundle chrissicool/zsh-256color
 antigen bundle lukechilds/zsh-better-npm-completion
-antigen bundle lukechilds/zsh-nvm
 antigen bundle michaelxmcbride/zsh-dircycle
 antigen bundle peterhurford/git-it-on.zsh
 antigen bundle rawkode/zsh-docker-run
@@ -58,6 +53,9 @@ antigen bundle zpm-zsh/autoenv
 
 # apply antigen bundles/theme
 antigen apply
+
+# fnm
+eval "$(fnm env --multi)"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then

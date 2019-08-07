@@ -64,6 +64,7 @@ function install_command_line_utilities
     brew install git-flow
     brew install git-extras
     brew install awscli
+    brew install Schniz/tap/fnm
 
     brew install imagemagick --with-webp
     brew install p7zip
