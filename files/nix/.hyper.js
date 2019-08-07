@@ -141,6 +141,9 @@ module.exports = {
         'hyper-broadcast',
         'hyper-statusline',
         'hyper-alt-click',
+        "hyper-search",
+        "hyper-single-instance",
+        "hyper-quit"
     ],
 
     // in development, you can create a directory under
