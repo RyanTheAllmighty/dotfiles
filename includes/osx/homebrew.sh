@@ -82,7 +82,7 @@ function install_command_line_utilities
 
     # kubernetes things
     brew install kubernetes-cli
-    brew install kubernetes-helm
+    brew install helm
     brew cask install minikube
 
     # fonts
@@ -92,6 +92,9 @@ function install_command_line_utilities
     # wagoodman/dive
     brew tap wagoodman/dive
     brew install dive
+
+    # C#/.net things
+    brew cask install dotnet-sdk
 }
 
 function install_applications
@@ -101,13 +104,15 @@ function install_applications
     brew cask install --appdir="~/Applications" alfred
     brew cask install --appdir="~/Applications" bartender
     brew cask install --appdir="~/Applications" beardedspice
-    brew cask install --appdir="~/Applications" cinch
+    brew cask install --appdir="~/Applications" bubo
     brew cask install --appdir="~/Applications" discord
     brew cask install --appdir="~/Applications" docker
     brew cask install --appdir="~/Applications" firefox-developer-edition
     brew cask install --appdir="~/Applications" google-chrome
     brew cask install --appdir="~/Applications" hyper
+    brew cask install --appdir="~/Applications" inkdrop
     brew cask install --appdir="~/Applications" istat-menus
+    brew cask install --appdir="~/Applications" paw
     brew cask install --appdir="~/Applications" postman
     brew cask install --appdir="~/Applications" slack
     brew cask install --appdir="~/Applications" spectacle
@@ -118,7 +123,6 @@ function install_applications
 function install_global_applications
 {
     # Install global applications
-    brew cask install --appdir="/Applications" iterm2
     brew cask install --appdir="/Applications" vagrant
     brew cask install --appdir="/Applications" virtualbox
 }
