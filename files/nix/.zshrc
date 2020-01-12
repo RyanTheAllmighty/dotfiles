@@ -115,4 +115,8 @@ if type "tldr" > /dev/null; then
     alias tldr="tldr --theme ocean"
 fi
 
+if type "fnm" > /dev/null; then
+    alias nvm="fnm"
+fi
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
