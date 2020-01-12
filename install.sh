@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # Import the shared *nix functions as they're used by both OSX and Linux
 . "$HOME/.dotfiles/includes/nix/functions.sh"
 
@@ -25,7 +26,6 @@ esac
 
 if [ ! -f "$HOME/.dotfiles/.system-setup" ]; then
     setup_system
-
 fi
 
 update_system

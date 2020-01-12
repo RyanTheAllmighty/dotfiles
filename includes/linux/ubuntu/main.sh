@@ -6,14 +6,8 @@ function setup_system
 {
     echo Setting up system
 
-    # upgrade all packages
-    upgrade_packages
-
-    # install some base system packages (such as git etc)
+    # make sure base system packages are installed
     install_base_system_packages
-
-    # install zsh and related plugins
-    install_zsh
 
     touch "$HOME/.dotfiles/.system-setup"
 }
@@ -23,11 +17,17 @@ function update_system
 {
     echo Updating system
 
-    # make sure base system packages are installed
-    install_base_system_packages
-
     # upgrade all packages in pacman
     upgrade_packages
+
+    # make sure pip packages are installed
+    install_pip_packages
+
+    # install zsh and related plugins
+    install_zsh
+
+    # install fnm (node version manager)
+    install_fnm
 }
 
 function install_dotfiles

@@ -55,6 +55,7 @@ antigen bundle zpm-zsh/autoenv
 antigen apply
 
 # fnm
+export PATH="$HOME/.fnm:$PATH"
 eval "$(fnm env --multi)"
 
 # enable color support of ls and also add handy aliases

@@ -14,6 +14,11 @@ function install_base_system_packages
     install_apt_package git git-lfs python vim tree speedtest-cli p7zip iotop
 }
 
+function install_pip_packages
+{
+    sudo pip install wakatime
+}
+
 function install_zsh
 {
     install_apt_package zsh autojump thefuck
@@ -21,4 +26,9 @@ function install_zsh
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     sudo mkdir -p /usr/local/share/antigen/
     sudo wget -O /usr/local/share/antigen/antigen.zsh https://git.io/antigen
+}
+
+function install_fnm
+{
+    curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --skip-shell
 }
