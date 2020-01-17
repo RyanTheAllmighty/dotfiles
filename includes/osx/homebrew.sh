@@ -125,6 +125,7 @@ function install_global_applications
     # Install global applications
     brew cask install --appdir="/Applications" vagrant
     brew cask install --appdir="/Applications" virtualbox
+    brew cask install --appdir="/Applications" zeplin
 }
 
 function install_zsh
