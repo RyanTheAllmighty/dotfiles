@@ -1,3 +1,9 @@
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+    mkdir -p $ZSH_CACHE_DIR
+fi
+
 # path to oh-my-zsh installation
 [[ -d /usr/share/oh-my-zsh ]] && export ZSH=/usr/share/oh-my-zsh
 [[ -d $HOME/.oh-my-zsh ]] && export ZSH=$HOME/.oh-my-zsh
@@ -87,12 +93,6 @@ COMPLETION_WAITING_DOTS="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-    mkdir -p $ZSH_CACHE_DIR
-fi
 
 # import seperate aliases file if it exists
 if [ -f ~/.aliases ]; then
