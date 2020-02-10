@@ -80,11 +80,6 @@ function install_command_line_utilities
     brew install terraform
     brew install jq
 
-    # kubernetes things
-    brew install kubernetes-cli
-    brew install helm
-    brew cask install minikube
-
     # fonts
     brew tap caskroom/fonts
     brew cask install font-fira-code

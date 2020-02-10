@@ -36,7 +36,6 @@ antigen bundle robbyrussell/oh-my-zsh plugins/aws
 antigen bundle robbyrussell/oh-my-zsh plugins/docker
 antigen bundle robbyrussell/oh-my-zsh plugins/docker-compose
 antigen bundle robbyrussell/oh-my-zsh plugins/gpg-agent
-antigen bundle robbyrussell/oh-my-zsh plugins/kubectl
 antigen bundle robbyrussell/oh-my-zsh plugins/npm
 antigen bundle robbyrussell/oh-my-zsh plugins/perms
 antigen bundle robbyrussell/oh-my-zsh plugins/thefuck
