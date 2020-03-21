@@ -59,6 +59,9 @@ antigen bundle zpm-zsh/autoenv
 # apply antigen bundles/theme
 antigen apply
 
+# if there is a id.gpg file in ~/.ssh directory, import it
+[[ -f ~/.ssh/id.gpg ]] && gpg --import ~/.ssh/id.gpg >/dev/null 2>&1
+
 # fnm
 export PATH="$HOME/.fnm:$PATH"
 eval "$(fnm env --multi)"
