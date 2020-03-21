@@ -6,6 +6,7 @@ function upgrade_packages
 
 function install_apt_package
 {
+    sudo apt-get update -y
     sudo apt-get install -y $@
 }
 
