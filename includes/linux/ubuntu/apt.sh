@@ -1,12 +1,12 @@
 function upgrade_packages
 {
-    sudo apt update -y
-    sudo apt upgrade -y
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
 }
 
 function install_apt_package
 {
-    sudo apt install -y $@
+    sudo apt-get install -y $@
 }
 
 function install_base_system_packages
