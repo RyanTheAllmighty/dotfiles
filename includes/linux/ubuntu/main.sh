@@ -17,7 +17,10 @@ function update_system
 {
     echo Updating system
 
-    # upgrade all packages in pacman
+    # make sure base system packages are installed
+    install_base_system_packages
+
+    # upgrade all packages
     upgrade_packages
 
     # make sure pip packages are installed
