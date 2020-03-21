@@ -11,7 +11,7 @@ function install_apt_package
 
 function install_base_system_packages
 {
-    install_apt_package git git-lfs python vim tree speedtest-cli p7zip iotop
+    install_apt_package wget git git-lfs python vim tree speedtest-cli p7zip python-pip iotop
 }
 
 function install_pip_packages
