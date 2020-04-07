@@ -21,6 +21,9 @@ export SPACESHIP_EXIT_CODE_SHOW=true
 export AWSP_FILE_TO_READ='~/.aws/credentials';
 export AWSP_USE_CREDENTIALS=true;
 
+# turn ssh agent forwarding on
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
 # enable oh-my-zsh
 antigen use oh-my-zsh
 
@@ -38,12 +41,12 @@ antigen bundle robbyrussell/oh-my-zsh plugins/docker-compose
 antigen bundle robbyrussell/oh-my-zsh plugins/gpg-agent
 antigen bundle robbyrussell/oh-my-zsh plugins/npm
 antigen bundle robbyrussell/oh-my-zsh plugins/perms
+antigen bundle robbyrussell/oh-my-zsh plugins/ssh-agent
 antigen bundle robbyrussell/oh-my-zsh plugins/thefuck
 antigen bundle robbyrussell/oh-my-zsh plugins/terraform
 antigen bundle robbyrussell/oh-my-zsh plugins/vagrant
 
 # custom plugins
-antigen bundle bobsoppe/zsh-ssh-agent
 antigen bundle chrissicool/zsh-256color
 antigen bundle lukechilds/zsh-better-npm-completion
 antigen bundle michaelxmcbride/zsh-dircycle
@@ -58,9 +61,6 @@ antigen bundle zpm-zsh/autoenv
 
 # apply antigen bundles/theme
 antigen apply
-
-# if there is a id.gpg file in ~/.ssh directory, import it
-[[ -f ~/.ssh/id.gpg ]] && gpg --import ~/.ssh/id.gpg >/dev/null 2>&1
 
 # fnm
 export PATH="$HOME/.fnm:$PATH"
