@@ -52,7 +52,6 @@ antigen bundle lukechilds/zsh-better-npm-completion
 antigen bundle michaelxmcbride/zsh-dircycle
 antigen bundle peterhurford/git-it-on.zsh
 antigen bundle rawkode/zsh-docker-run
-antigen bundle sobolevn/wakatime-zsh-plugin
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zpm-zsh/colors
 antigen bundle zsh-users/zsh-autosuggestions
