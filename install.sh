@@ -7,17 +7,13 @@ case "$OSTYPE" in
     . "$HOME/.dotfiles/includes/osx/main.sh"
     ;;
   linux*)
-    if [ -d "/mnt/c/Windows" ]; then
-        . "$HOME/.dotfiles/includes/wsl/main.sh"
+    RELEASENAME=`lsb_release -is`
+    if [ "$RELEASENAME" == 'Ubuntu' ] || [ "$RELEASENAME" == 'Debian' ]; then
+        . "$HOME/.dotfiles/includes/linux/ubuntu/main.sh"
+    elif [ "$RELEASENAME" == 'ManjaroLinux' ]; then
+        . "$HOME/.dotfiles/includes/linux/manjaro/main.sh"
     else
-        RELEASENAME=`lsb_release -is`
-        if [ "$RELEASENAME" == 'Ubuntu' ] || [ "$RELEASENAME" == 'Debian' ]; then
-            . "$HOME/.dotfiles/includes/linux/ubuntu/main.sh"
-        elif [ "$RELEASENAME" == 'ManjaroLinux' ]; then
-            . "$HOME/.dotfiles/includes/linux/manjaro/main.sh"
-        else
-            echo "Unsupported OS type. Exiting" 1>&2
-        fi
+        echo "Unsupported OS type. Exiting" 1>&2
     fi
     ;;
   *)
