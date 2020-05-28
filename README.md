@@ -8,8 +8,6 @@ For \*nix systems there are no prerequisites.
 
 For Windows you must be running at least Windows 10 version 1709 (Fall Creators Update).
 
-For Windows Subsystem for Linux you must be running Ubuntu 18.04.
-
 ## Usage
 
 To install, there are 2 methods.
@@ -77,11 +75,13 @@ The folders within `bin/` are added to the PATH and are made available from the 
 
 ## Tested Configurations
 
-I've tested this using my own personal rigs which are made up of:
+I've tested this using my own personal rig which uses Windows 10 Professional. But is also used when
+using WSL and Docker containers using VSCode remote.
 
-* Windows 10 Professional
-* Manjaro Linux Gnome Edition
-* Manjaro Linux KDE Edition
+This also works with various OSX configurations out of the box.
+
+This was previously used for a Manjaro Linux system, but I've since moved away from using Linux for
+my main machine, but it's left there in case one day I revisit it.
 
 ## Inspiration
 
