@@ -8,5 +8,3 @@
     editor = vim
 [commit]
     gpgSign = true
-[credential]
-	helper = "!f() { /home/vscode/.vscode-server/bin/2aae1f26c72891c399f860409176fe435a154b13/node /tmp/vscode-remote-containers-0047ae10f6e90cb4dba9cd8aa3a0ca590d14617f.js $*; }; f"

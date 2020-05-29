@@ -24,6 +24,11 @@ export AWSP_USE_CREDENTIALS=true;
 # turn ssh agent forwarding on
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
+# tell keychain which keys/identities to load
+zstyle :omz:plugins:keychain agents gpg,ssh
+zstyle :omz:plugins:keychain identities `find ~/.ssh -maxdepth 1 -type f ! -name '*.ppk' ! -name '*.pub' -name 'id_*'` 5539FCDB88950EFD
+zstyle :omz:plugins:keychain options --quiet
+
 # enable oh-my-zsh
 antigen use oh-my-zsh
 
@@ -39,9 +44,9 @@ antigen bundle robbyrussell/oh-my-zsh plugins/aws
 antigen bundle robbyrussell/oh-my-zsh plugins/docker
 antigen bundle robbyrussell/oh-my-zsh plugins/docker-compose
 antigen bundle robbyrussell/oh-my-zsh plugins/gpg-agent
+antigen bundle robbyrussell/oh-my-zsh plugins/keychain
 antigen bundle robbyrussell/oh-my-zsh plugins/npm
 antigen bundle robbyrussell/oh-my-zsh plugins/perms
-antigen bundle robbyrussell/oh-my-zsh plugins/ssh-agent
 antigen bundle robbyrussell/oh-my-zsh plugins/thefuck
 antigen bundle robbyrussell/oh-my-zsh plugins/terraform
 antigen bundle robbyrussell/oh-my-zsh plugins/vagrant
