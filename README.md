@@ -4,51 +4,25 @@ My dotfiles.
 
 ## Prerequisites
 
-For \*nix systems there are no prerequisites.
-
-For Windows you must be running at least Windows 10 version 1709 (Fall Creators Update).
+There are no prerequisites, everything that's needed is installed by the scripts.
 
 ## Usage
 
-To install, there are 2 methods.
+Simply clone this repository to a directory called `.dotfiles` in your user home directory:
 
-### Single Use
-
-This is for single use. It will not keep track and allow you to commit changes to the dotfiles and
-any changes will need to run the command again.
-
-#### \*nix Systems
-
-Run the following from a terminal:
-
-```bash
-bash -c "`curl -fsSL https://raw.github.com/RyanTheAllmighty/dotfiles/master/remote-install.sh`"
+```sh
+git clone git@github.com:RyanTheAllmighty/dotfiles.git $HOME/.dotfiles
 ```
 
-#### Windows Systems
+Or if you don't have git installed, simply
+[download](https://github.com/RyanTheAllmighty/dotfiles/archive/master.zip) and extract to your home
+directory.
 
-TBA
+Then run the install file based on your operating system.
 
-### Long Term Use
+For \*nix systems run `sh install.sh`.
 
-This is when you want to continually add and update the dotfiles to a remote repository.
-
-This connects this repository to your local `$HOME/.dotfiles` directory so you can use git to update
-changes to your dotfiles.
-
-In order for this to work, you'll need to make sure you setup your github ssh credentials.
-
-#### \*nix Systems
-
-Run the following from a terminal:
-
-```bash
-bash -c "`curl -fsSL https://raw.github.com/RyanTheAllmighty/dotfiles/master/remote-git-install.sh`"
-```
-
-#### Windows Systems
-
-TBA
+For Windows Systems right click the `install.ps1` file and run it as administrator.
 
 ## Editing Files
 
@@ -67,7 +41,7 @@ instead do it from where the file is located.
 ## Adding Files
 
 To add new files you simply need to put it in the `files` directory and then add it into the correct
-`includes/dotfiles.sh` file.
+files in the `install_dotfiles` functions for \*nix and `Install_Dotfiles` for Windows.
 
 ## Bin Files
 
@@ -87,4 +61,4 @@ my main machine, but it's left there in case one day I revisit it.
 
 Parts of this repository are inspired from the following repositories:
 
-* <https://github.com/donnemartin/dev-setup>
+- <https://github.com/donnemartin/dev-setup>

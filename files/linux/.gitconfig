@@ -8,3 +8,5 @@
     editor = vim
 [commit]
     gpgSign = true
+[credential]
+    helper = cache --timeout 28800
