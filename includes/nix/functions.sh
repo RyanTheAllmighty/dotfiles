@@ -1,3 +1,9 @@
+function sudo
+{
+    [[ $EUID = 0 ]] || set -- command sudo "$@"
+    "$@"
+}
+
 function add_shell
 {
     # Add the shell if it doesn't already exist in the /etc/shells file
