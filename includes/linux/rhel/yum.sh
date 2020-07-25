@@ -12,17 +12,17 @@ function install_package
 
 function install_base_system_packages
 {
-    install_package unzip wget git git-lfs python vim tree speedtest-cli p7zip python3-pip iotop keychain
+    install_package unzip wget git git-lfs python vim tree p7zip python3-pip python3-devel iotop keychain
 }
 
 function install_pip_packages
 {
-    sudo pip install wakatime
+    sudo pip3 install wakatime thefuck
 }
 
 function install_zsh
 {
-    install_package zsh autojump thefuck
+    install_package zsh autojump
 
     git clone https://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
     sudo mkdir -p /usr/local/share/antigen/
