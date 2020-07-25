@@ -1,5 +1,5 @@
 . "$HOME/.dotfiles/includes/nix/functions.sh"
-. "$HOME/.dotfiles/includes/linux/ubuntu/apt.sh"
+. "$HOME/.dotfiles/includes/linux/debian/apt.sh"
 
 # this is only run once
 function setup_system

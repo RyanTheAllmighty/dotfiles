@@ -8,12 +8,15 @@ case "$OSTYPE" in
     ;;
   linux*)
     RELEASENAME=`lsb_release -is`
-    if [ "$RELEASENAME" == 'Ubuntu' ] || [ "$RELEASENAME" == 'Debian' ]; then
-        . "$HOME/.dotfiles/includes/linux/ubuntu/main.sh"
-    elif [ "$RELEASENAME" == 'ManjaroLinux' ]; then
-        . "$HOME/.dotfiles/includes/linux/manjaro/main.sh"
+    if [ "$(grep -Ei 'debian|buntu|mint' /etc/*release)" ]; then
+        . "$HOME/.dotfiles/includes/linux/debian/main.sh"
+    elif [ "$(grep -Ei 'arch' /etc/*release)" ]; then
+        . "$HOME/.dotfiles/includes/linux/arch/main.sh"
+    elif [ "$(grep -Ei 'rhel|centos|fedora' /etc/*release)" ]; then
+        . "$HOME/.dotfiles/includes/linux/rhel/main.sh"
     else
         echo "Unsupported OS type. Exiting" 1>&2
+        exit 1
     fi
     ;;
   *)
