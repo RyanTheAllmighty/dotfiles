@@ -69,7 +69,6 @@ function install_command_line_utilities
     brew install imagemagick --with-webp
     brew install p7zip
     brew install rename
-    brew install speedtest_cli
     brew install ssh-copy-id
     brew install tree
     brew install gnupg
@@ -87,40 +86,32 @@ function install_command_line_utilities
     # wagoodman/dive
     brew tap wagoodman/dive
     brew install dive
-
-    # C#/.net things
-    brew cask install dotnet-sdk
 }
 
 function install_applications
 {
     # Install applications
-    brew cask install --appdir="~/Applications" 1password
     brew cask install --appdir="~/Applications" alfred
     brew cask install --appdir="~/Applications" bartender
     brew cask install --appdir="~/Applications" beardedspice
+    brew cask install --appdir="~/Applications" bitwarden
     brew cask install --appdir="~/Applications" bubo
     brew cask install --appdir="~/Applications" discord
     brew cask install --appdir="~/Applications" docker
     brew cask install --appdir="~/Applications" firefox-developer-edition
     brew cask install --appdir="~/Applications" google-chrome
     brew cask install --appdir="~/Applications" hyper
-    brew cask install --appdir="~/Applications" inkdrop
     brew cask install --appdir="~/Applications" istat-menus
-    brew cask install --appdir="~/Applications" paw
+    brew cask install --appdir="~/Applications" pock
     brew cask install --appdir="~/Applications" postman
-    brew cask install --appdir="~/Applications" slack
     brew cask install --appdir="~/Applications" spectacle
-    brew cask install --appdir="~/Applications" spotify
     brew cask install --appdir="~/Applications" visual-studio-code
 }
 
 function install_global_applications
 {
     # Install global applications
-    brew cask install --appdir="/Applications" vagrant
-    brew cask install --appdir="/Applications" virtualbox
-    brew cask install --appdir="/Applications" zeplin
+    brew cask install --appdir="/Applications" slack
 }
 
 function install_zsh
