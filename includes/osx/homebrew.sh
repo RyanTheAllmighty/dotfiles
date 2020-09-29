@@ -17,7 +17,7 @@ function install_homebrew
     brew update
 
     # Upgrade any already-installed formulae.
-    brew upgrade --all
+    brew upgrade
 
     # Remove outdated versions from the cellar.
     brew cleanup
@@ -36,11 +36,11 @@ function install_command_line_utilities
     # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
     brew install findutils
 
-    # Install GNU `sed`, overwriting the built-in `sed`.
-    brew install gnu-sed --with-default-names
+    # Install GNU `sed`
+    brew install gnu-sed
 
-    # Install `wget` with IRI support.
-    brew install wget --with-iri
+    # Install `wget`
+    brew install wget
 
     # Install Python
     brew install python
@@ -66,7 +66,7 @@ function install_command_line_utilities
     brew install awscli
     brew install Schniz/tap/fnm
 
-    brew install imagemagick --with-webp
+    brew install imagemagick
     brew install p7zip
     brew install rename
     brew install ssh-copy-id
@@ -80,7 +80,7 @@ function install_command_line_utilities
     brew install jq
 
     # fonts
-    brew tap caskroom/fonts
+    brew tap homebrew/cask-fonts
     brew cask install font-fira-code
 
     # wagoodman/dive
