@@ -28,8 +28,3 @@ function install_zsh
     sudo mkdir -p /usr/local/share/antigen/
     sudo wget -O /usr/local/share/antigen/antigen.zsh https://git.io/antigen
 }
-
-function install_fnm
-{
-    curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash -s -- --skip-shell
-}

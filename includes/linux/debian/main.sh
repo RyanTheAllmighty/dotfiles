@@ -28,9 +28,6 @@ function update_system
 
     # install zsh and related plugins
     install_zsh
-
-    # install fnm (node version manager)
-    install_fnm
 }
 
 function install_dotfiles
