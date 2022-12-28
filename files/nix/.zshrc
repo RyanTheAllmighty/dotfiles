@@ -62,13 +62,13 @@ antigen bundle zpm-zsh/colors
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle walesmd/caniuse.plugin.zsh
 antigen bundle zpm-zsh/autoenv
+antigen bundle ryantheallmighty/zsh-fnm
 
 # apply antigen bundles/theme
 antigen apply
 
 # fnm
-export PATH="$HOME/.fnm:$PATH"
-eval "$(fnm env --multi)"
+eval "$(fnm env --use-on-cd)"
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
