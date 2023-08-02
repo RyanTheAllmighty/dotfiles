@@ -7,45 +7,45 @@ function sudo
 function add_shell
 {
     # Add the shell if it doesn't already exist in the /etc/shells file
-    if ! grep -Fxq "$1" /etc/shells
+    if ! grep -Fxq -- "$1" '/etc/shells';
     then
-        sudo bash -c "echo $1 >> /etc/shells"
+        sudo bash -c "echo $1 >> '/etc/shells';";
     fi
 }
 
 function set_shell
 {
-    sudo chsh -s $1
+    sudo chsh -s -- "$1";
 }
 
 function get_sudo_access
 {
-    sudo -v
+    sudo -v;
 }
 
 function link_file
 {
-    ln -sf "$HOME/.dotfiles/files/$1" $2
+    ln -sf "${HOME}/.dotfiles/files/$1" -- "$2";
 }
 
 function install_bin
 {
-    FINAL_FILE=/usr/local/bin/${1##*/}
+    declare FINAL_FILE="/usr/local/bin/${1##*/}";
 
-    cp -f $1 $FINAL_FILE
-    chmod +x $FINAL_FILE
+    cp -f "$1" -- "$FINAL_FILE";
+    chmod +x -- "$FINAL_FILE";
 }
 
 function install_local_bin
 {
-    install_bin "$HOME/.dotfiles/bin/$1"
+    install_bin "${HOME}/.dotfiles/bin/$1";
 }
 
 function install_prettyping
 {
-    curl -O https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping
+    curl -O -- 'https://raw.githubusercontent.com/denilsonsa/prettyping/master/prettyping';
 
-    install_bin prettyping
+    install_bin 'prettyping';
 
-    rm -f prettyping
+    rm -f -- 'prettyping';
 }
